@@ -50,6 +50,10 @@ body{
     border: none;
 }
 
+.artist-btn:focus{
+    outline: none;
+}
+
 .album-list{
     padding: 0;
 display: flex;

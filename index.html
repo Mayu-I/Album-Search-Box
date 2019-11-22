@@ -35,8 +35,8 @@
                     dataType: "jsonp",
 
                     success: function (data) {
-                        if (data.results == "") {
-                            $('<li></li>')
+                        if (data.results === " ") {
+                            $(`<li>It's Error</li>`).appendTo(".album-list")
                         } else {
                             for (let i = 0; i < 6; i++) {
                                 const select = `list-${data.results[i].artistName}`;
@@ -50,6 +50,7 @@
                     },
                     complete: function () {
                         $("#artist-name").val("");
+
                     }
                 })
             });
